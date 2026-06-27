@@ -1,0 +1,26 @@
+name: 03 - Workflow Runners
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "Provide a message to echo"
+        required: true
+        default: "Hello, world!"
+jobs:
+  ubuntu-echo:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Show OS
+          run: echo "This job is running on Ubuntu runner. ${{ runner.os }}"
+  windows-echo:
+    runs-on: windows-latest
+    steps:
+        - name: Show OS
+          shell: bash
+          run: echo "This job is running on Windows runner. ${{ runner.os }}"
+  macos-echo:
+    runs-on: macos-latest
+    steps:
+        - name: Show OS
+          shell: bash
+          run: echo "This job is running on macOS runner. ${{ runner.os }}"
