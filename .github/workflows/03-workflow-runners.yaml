@@ -1,11 +1,5 @@
 name: 03 - Workflow Runners
-on:
-  workflow_dispatch:
-    inputs:
-      message:
-        description: "Provide a message to echo"
-        required: true
-        default: "Hello, world!"
+on: [workflow_dispatch]
 jobs:
   ubuntu-echo:
     runs-on: ubuntu-latest

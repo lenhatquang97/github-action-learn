@@ -6,8 +6,6 @@ on:
         description: "The message to commit"
         required: true
         default: "Hello, world!"
-  schedule:
-    - cron: "0 0 * * *"
 jobs:
   echo:
     runs-on: ubuntu-latest
